@@ -1,0 +1,7 @@
+.page-footer {
+  background: linear-gradient(180deg, rgb(242, 242, 242) 66px, rgb(34, 38, 40) 66px);
+}
+.page-footer .wide-container {
+  height: 358px;
+  background: url("./images/footer.jpg") no-repeat center;
+}/*# sourceMappingURL=footer.css.map */
