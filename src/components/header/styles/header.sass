@@ -1,0 +1,188 @@
+.page-header
+  padding-top: 14px 
+  margin-bottom: 13px
+
+  .upper-container
+    display: flex
+    justify-content: space-between
+    padding: 14px 0
+
+    .main-nav
+      a
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+
+        &:not(:last-child)
+          margin-right: 40px
+          
+    .header-info
+      display: flex
+      align-items: center
+
+      li:not(:last-child)
+        display: flex
+        align-items: center
+        margin-right: 30px
+
+        img
+          margin-right: 10px
+        
+      .phone
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 1px
+        
+      .geo
+        p
+          font-family: 'Fira Sans'
+          font-style: normal
+          font-weight: 400
+          font-size: 12px
+          line-height: 14px
+          color: #c93e33
+        
+      .mail
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        color: #333333
+
+  .middle-container
+    background: #ffffff
+    margin-bottom: 17px
+
+    .wide-container
+      padding: 20px 0
+      display: flex 
+      align-items: center
+      
+      
+      .logo
+        display: flex
+        align-items: center
+
+        img
+          margin-right: 15px
+
+        h1
+          width: 112px
+          font-family: 'Fira Sans'
+          font-style: normal
+          font-weight: 400
+          font-size: 12px
+          line-height: 12px
+      
+      .catalog-btn
+        display: flex
+        align-items: center
+        margin-right: 20px
+        padding: 11px 20px 
+        padding-right: 33px
+        border-radius: 4px
+        border: none
+        background-color: #c93e33
+        color: #ffffff
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 500
+        font-size: 15px
+        line-height: 18px
+        cursor: pointer
+        
+        img
+          margin-right: 17px
+      
+      .search
+        position: relative
+        
+        #search-field
+          border-radius: 4px
+          border: 1px solid #e6e6e6
+          min-width: 546px
+          padding: 12px 48px
+          margin-right: 42px
+          font-family: 'Fira Sans'
+          font-style: normal
+          font-weight: 300
+          font-size: 15px
+          line-height: 18px
+          color: #b3b3b3
+
+        button
+          position: absolute
+          top: 13px
+          right: 57px
+          display: block
+          width: 20px
+          height: 20px
+          background: url('./icons/search1.svg') no-repeat center
+          border: none
+          cursor: pointer
+
+        &::before
+          content: ""
+          position: absolute
+          display: block
+          width: 16px
+          height: 16px
+          background: url('./icons/search.svg')
+          z-index: 10
+          top: 13px
+          left: 17px
+      
+      .btn
+        display: flex
+        flex-direction: column
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        border: none
+        background: none
+
+        img
+          margin: 0 auto
+          margin-bottom: 7px
+        
+        &:not(:last-child)
+          margin-right: 36px
+
+  .lower-container
+    ul
+      display: flex
+
+      li
+        font-family: 'Fira Sans'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        color: #b3b3b3
+        position: relative
+
+        &:not(:last-child)
+          margin-right: 30px
+
+          &::after
+            content: ""
+            display: block
+            width: 6px
+            height: 6px
+            background: url('./icons/breadcumb.svg') no-repeat center
+            position: absolute
+            right: -15px
+            top: calc( 50% - 3px )
+
+
+        &:last-child
+          font-weight: 500
+          color: #000000
