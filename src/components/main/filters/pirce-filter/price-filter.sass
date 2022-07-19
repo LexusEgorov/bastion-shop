@@ -1,0 +1,54 @@
+.price-filter
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  border-bottom: 1px solid #e6e6e6
+  
+.filter-header
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 20px
+
+  h3
+    font-family: 'Fira Sans'
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+  
+  button
+    cursor: pointer
+    width: 14px
+    height: 14px
+    border: none
+    background: url('./filter-toggler.svg') no-repeat center
+
+.price-inputs
+  display: flex
+  align-items: center
+
+  .price-from
+    margin-right: 13px
+
+  .price-from,
+  .price-to
+    position: relative
+    font-family: 'Fira Sans'
+    font-weight: 400
+    font-size: 12px
+    line-height: 14px
+
+    input
+      width: 108px
+      padding: 10px 32px
+      color: #b3b3b3
+      border-radius: 2px
+      border: 1px solid #e6e6e6
+
+    label
+      position: absolute
+      left: 15px
+      top: calc( 50% - 7px )
+

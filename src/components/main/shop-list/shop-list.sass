@@ -1,0 +1,35 @@
+.shop-list
+  display: flex
+  flex-direction: column
+  
+  .list-header
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: wrap
+    padding: 16px 15px
+
+    .standart
+      padding: 6px 7px 5px 7px
+      font-family: 'Fira Sans'
+      font-weight: 400
+      font-size: 12px
+      line-height: 14px
+      background: #f9f9f9
+      border-radius: 4px
+      margin-bottom: 5px
+      cursor: pointer
+
+      &:not(:last-child)
+        margin-right: 5px
+        
+
+      &.active
+        background: #c93e33
+        color: #ffffff
+
+  .cards-list
+    grid-column: 2/3
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
