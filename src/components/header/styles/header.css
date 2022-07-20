@@ -111,7 +111,6 @@
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
-  color: #b3b3b3;
 }
 .page-header .middle-container .wide-container .search button {
   position: absolute;
@@ -145,6 +144,7 @@
   line-height: 14px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 .page-header .middle-container .wide-container .btn img {
   margin: 0 auto;

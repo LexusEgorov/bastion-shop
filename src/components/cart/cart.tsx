@@ -11,7 +11,7 @@ function Cart() : JSX.Element {
         </div>
         <article className="cart-layout">
           <div className="shopping-list">
-            <CartItem />
+            <CartItem />                      
             <div className="shopping-list-footer">
               <button className='clear'>
                 <img src="images/icons/trash.svg" alt="" width={18} height={18}/>
