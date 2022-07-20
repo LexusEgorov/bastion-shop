@@ -1,0 +1,124 @@
+.order-form
+  display: flex
+  flex-direction: column
+
+  .form-header
+    padding: 18px 20px
+    border-bottom: 1px solid #e6e6e6
+
+    h3
+      font-family: 'Fira Sans'
+      font-weight: 500
+      font-size: 18px
+      line-height: 22px
+      letter-spacing: 1px
+  
+  form
+    display: flex
+    flex-direction: column
+    padding: 18px 20px
+
+    h4
+      font-family: 'Fira Sans'
+      font-weight: 400
+      font-size: 15px
+      line-height: 18px
+      color: #b3b3b3
+      margin-bottom: 20px
+
+    .inputs
+      .field
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 25px
+
+        .input
+          position: relative
+          padding-top: 16px
+          border-bottom: 1px solid #e6e6e6
+
+          &:focus-within
+            label
+              display: inline            
+
+          label
+            display: none
+            position: absolute
+            top: 0
+            left: 0
+            color: #b3b3b3
+            font-family: 'Fira Sans'
+            font-weight: 400
+            font-size: 12px
+            line-height: 14px
+            
+          input
+            border: none
+            background: none
+            font-family: 'Fira Sans'
+            font-weight: 400
+            font-size: 15px
+            line-height: 18px
+            padding: 7px 30px
+          
+          img
+            position: absolute
+            bottom: 8px
+            left: 5px
+    
+    .form-footer
+      width: 100%
+
+      .result-price
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+
+        span
+          font-family: 'Fira Sans'
+          font-weight: 500
+          font-size: 18px
+          line-height: 22px
+          letter-spacing: 1px
+
+        .price
+          color: #c93e33
+    
+    .sub
+      width: 100%
+      padding: 12px 32px
+      margin-bottom: 15px
+      display: flex
+      align-items: center
+      font-family: 'Fira Sans'
+      font-weight: 500
+      font-size: 15px
+      line-height: 18px
+      color: #ffffff
+      background: #c93e33
+      border-radius: 4px
+      border: none
+      cursor: pointer
+
+      img
+        margin-right: 26px
+
+    .commercial
+      width: 100%
+      padding: 12px 55px 12px 28px
+      margin-bottom: 15px
+      display: flex
+      align-items: center
+      font-family: 'Fira Sans'
+      font-weight: 500
+      font-size: 15px
+      line-height: 18px
+      color: #c93e33
+      background: #ffffff
+      border-radius: 4px
+      border: 1px solid #c93e33
+      cursor: pointer
+
+      img
+        margin-right: 22px

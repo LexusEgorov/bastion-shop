@@ -1,0 +1,53 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cart .cart-header {
+  margin-bottom: 30px;
+}
+.cart .cart-header h2 {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+.cart .cart-layout {
+  display: grid;
+  grid-template-columns: auto 280px;
+  background: #ffffff;
+  margin-bottom: 40px;
+}
+.cart .cart-layout .shopping-list {
+  grid-column: 1/2;
+  border-right: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.cart .cart-layout .shopping-list .shopping-list-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 31px 30px 35px 30px;
+}
+.cart .cart-layout .shopping-list .shopping-list-footer .clear {
+  display: flex;
+  align-items: center;
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #c93e33;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.cart .cart-layout .shopping-list .shopping-list-footer .clear img {
+  margin-right: 13px;
+}
+.cart .cart-layout .order {
+  grid-column: 2/3;
+}/*# sourceMappingURL=cart.css.map */
