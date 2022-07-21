@@ -1,3 +1,5 @@
+import Nouislider from "nouislider-react";
+import "nouislider/distribute/nouislider.css";
 import './price-filter.css'
 
 function PriceFilter() : JSX.Element{
@@ -17,6 +19,7 @@ function PriceFilter() : JSX.Element{
           <input type="text" name="price-to-input" id="price-to-input" placeholder='10000' maxLength={5}/>
         </div>
       </div>
+      <Nouislider id='slider' start={[0, 10000]} range={{min: 0, max: 10000}} />
     </div>
   );
 }

@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "nouislider-react": "3.4.1"
+    "nouislider-react": "3.4.1",
+    "react-router-dom": "^6.3.0"
   }
 }

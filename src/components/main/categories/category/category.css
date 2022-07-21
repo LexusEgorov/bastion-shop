@@ -1,0 +1,31 @@
+.category {
+  width: 100%;
+  margin-bottom: 17px;
+}
+.category:last-child {
+  margin-bottom: 20px;
+}
+.category p {
+  font-family: "Fira Sans";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #b3b3b3;
+}
+.category .category-name p {
+  color: #000000;
+}
+.category .category-name span {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 5px;
+  min-width: 13px;
+  height: 13px;
+  border-radius: 50px;
+  padding: 1px;
+  background: #c93e33;
+  font-size: 8px;
+  line-height: 10px;
+  color: #efefef;
+}/*# sourceMappingURL=category.css.map */

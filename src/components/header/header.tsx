@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/header.css';
 
 function Header() : JSX.Element {
@@ -7,8 +8,8 @@ function Header() : JSX.Element {
       <div className="wide-container">
         <div className="upper-container">
           <nav className="main-nav">
-            <a href="">Типы продуктов</a>
-            <a href="">Продукты</a>
+            <Link to='/add-type'>Типы продуктов</Link>
+            <Link to='/add-product'>Продукты</Link>
             <a href="">Выгоды для вас</a>
             <a href="">Гарантии</a>
             <a href="">Контакты</a>
@@ -31,10 +32,10 @@ function Header() : JSX.Element {
       </div>
         <div className="middle-container">
           <div className="wide-container">
-            <a href="" className="logo">
+            <Link to="/" className="logo">
               <img src="images/logo.svg" alt="Bastion Group" width="82" height="70"/>
               <h1>Производитель металлических изделий №1</h1>
-            </a>
+            </Link>
             <button className="catalog-btn">
               <img src="images/icons/catalog.svg" alt="" width="17" height="17"/>
               Каталог
@@ -43,14 +44,21 @@ function Header() : JSX.Element {
               <input type="text" name="search-field" id="search-field" placeholder="Поиск по названию"/>
               <button type="submit"></button>
             </form>
-            <button className="favorite-btn btn">
-              <img src="images/icons/favorite.svg" alt="" width="19" height="18"/>
-              Избранное
-            </button>
-            <button className="shopping-cart-btn btn">
-              <img src="images/icons/cart.svg" alt="" width="20" height="20"/>
-              Корзина
-            </button>
+            <div className="buttons">
+              <button className="favorite-btn btn">
+                <img src="images/icons/favorite.svg" alt="" width="19" height="18"/>
+                Избранное
+              </button>
+              <Link to='/cart' className="shopping-cart-btn btn">
+                <div className="image">
+                  <img src="images/icons/cart.svg" alt="" width="20" height="20"/>
+                  <div className="count-info">
+                    <span>1</span>
+                  </div>
+                </div>
+                Корзина
+              </Link>
+            </div>
           </div>
           </div>
         <div className="lower-container">

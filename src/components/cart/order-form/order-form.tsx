@@ -48,6 +48,7 @@ function OrderForm() : JSX.Element {
             Оформить заказ
           </button>
           <button className='commercial'>
+            <img src="./images/icons/commercial.svg" alt="" width={30} height={33}/>
             Коммерческое предложение
           </button>
         </div>

@@ -30,6 +30,7 @@
 .price-inputs {
   display: flex;
   align-items: center;
+  margin-bottom: 25px;
 }
 .price-inputs .price-from {
   margin-right: 13px;
@@ -54,4 +55,8 @@
   position: absolute;
   left: 15px;
   top: calc(50% - 7px);
+}
+
+#slider {
+  width: 100%;
 }/*# sourceMappingURL=price-filter.css.map */
