@@ -1,8 +1,12 @@
+import { useAppDispatch } from '../../hooks/hooks';
+import { Action } from '../../store/action';
 import CartItem from './cart-item/cart-item';
 import OrderForm from './order-form/order-form';
 import './styles/cart.css'
 
 function Cart() : JSX.Element {
+  const dispatch = useAppDispatch();
+
   return (
     <section className="cart">
       <div className="wide-container">
@@ -13,7 +17,12 @@ function Cart() : JSX.Element {
           <div className="shopping-list">
             <CartItem />                      
             <div className="shopping-list-footer">
-              <button className='clear'>
+              <button
+                className='clear'
+                onClick={() => {
+                  dispatch(Action.CART.CLEAR())
+                }}
+              >
                 <img src="images/icons/trash.svg" alt="" width={18} height={18}/>
                 Очистить корзину
               </button>

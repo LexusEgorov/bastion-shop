@@ -7,6 +7,8 @@ import Layout from './components/layout/layout';
 import Main from './components/main/main';
 import ShopForm from './components/shop-form/shop-form';
 import TypeForm from './components/type-form/type-form';
+import { useAppDispatch } from './hooks/hooks';
+import { Action } from './store/action';
 
 const shopTypes = [
   {id: 1, type: 'aaa'},
@@ -14,6 +16,8 @@ const shopTypes = [
 ];
 
 function App() {
+  const dispatch = useAppDispatch();
+  dispatch(Action.INIT());
   return (
     <div className="App">
       <BrowserRouter>
