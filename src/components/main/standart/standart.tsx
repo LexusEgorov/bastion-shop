@@ -1,6 +1,22 @@
-function Standart() : JSX.Element {
+import { useAppDispatch } from "../../../hooks/hooks";
+import { Action } from "../../../store/action";
+
+type StandartProps = {
+  standart: {
+    id: number,
+    name: string;
+    isActive: boolean;
+  }
+}
+
+function Standart({standart} : StandartProps) : JSX.Element {
+  const dispatch = useAppDispatch();
   return (
-    <span className="standart active">ГОСТ 14911-82</span>
+    <span className={`standart ${standart.isActive ? 'active' : ''}`}
+      onClick={() => {
+        dispatch(Action.STANDART.CHECK({id: standart.id}));
+      }}
+    >{standart.name}</span>
   );
 }
 

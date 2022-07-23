@@ -1,3 +1,4 @@
+import { type } from "os";
 import { store } from "../store/store";
 
 export type ShopType = {
@@ -19,7 +20,12 @@ export type ProductType = {
   name: string;
   typeId: number;
   price: number;
-  standartId: number; 
+  standart: string;
+  img: string;
+  isHit : boolean;
+  isStock: boolean; 
 };
 
 export type AppDispatchType = typeof store.dispatch;
+
+export type State = ReturnType<typeof store.getState>;

@@ -1,8 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/hooks';
 import './styles/header.css';
 
 function Header() : JSX.Element {
+  const cartCount = useAppSelector((state) => state.cartProducts.length);
+
   return(
     <header className="page-header">
       <div className="wide-container">
@@ -53,7 +55,7 @@ function Header() : JSX.Element {
                 <div className="image">
                   <img src="images/icons/cart.svg" alt="" width="20" height="20"/>
                   <div className="count-info">
-                    <span>1</span>
+                    <span>{cartCount}</span>
                   </div>
                 </div>
                 Корзина

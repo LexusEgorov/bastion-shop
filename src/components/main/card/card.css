@@ -34,6 +34,7 @@
   margin-bottom: 30px;
 }
 .card .text-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -48,6 +49,7 @@
   line-height: 12px;
   color: #c93e33;
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 .card .text-content h3 {
   font-family: "Fira Sans";
@@ -163,6 +165,9 @@
 .card .buttons .add img {
   margin: 0;
   margin-right: 15px;
+}
+.card .buttons .added {
+  background: rgba(201, 62, 51, 0.7);
 }
 .card .buttons .show-more {
   color: #000000;

@@ -21,6 +21,7 @@
   border-radius: 4px;
   margin-bottom: 5px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .shop-list .list-header .standart:not(:last-child) {
   margin-right: 5px;

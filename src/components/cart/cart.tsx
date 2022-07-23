@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { Action } from '../../store/action';
 import CartItem from './cart-item/cart-item';
 import OrderForm from './order-form/order-form';
@@ -6,6 +6,9 @@ import './styles/cart.css'
 
 function Cart() : JSX.Element {
   const dispatch = useAppDispatch();
+
+  const cartItems = useAppSelector((state) => state.cartProducts);
+  const products = useAppSelector((state) => state.products);
 
   return (
     <section className="cart">
@@ -15,7 +18,9 @@ function Cart() : JSX.Element {
         </div>
         <article className="cart-layout">
           <div className="shopping-list">
-            <CartItem />                      
+            {
+              cartItems.map((item) => <CartItem item={item} product={products[products.findIndex((product) => product.id === item.productId)]} key={item.id}/>)
+            }                      
             <div className="shopping-list-footer">
               <button
                 className='clear'

@@ -7,7 +7,7 @@ type ShopTypesProps = {
 function ShopTypes({types} : ShopTypesProps) : JSX.Element {
   return (
     <>{
-      types.map(type => <option value={type.id}>{type.type}</option>)
+      types.map(type => <option value={type.id} key={type.id}>{type.type}</option>)
     }</>
   );
 }

@@ -1,32 +1,77 @@
+import { useState } from 'react';
+import { useAppDispatch } from '../../../hooks/hooks';
+import { Action } from '../../../store/action';
+import { generator } from '../../../utils/utils';
 import './card.css'
 
-function Card(){
+type CardProps = {
+  product: {
+    id: number,
+    name: string,
+    typeId: number,
+    price: number,
+    standart: string, 
+    img: string,
+    isHit: boolean,
+    isStock: boolean,
+    inCart: boolean,
+  }
+}
+
+const generateId = generator();
+
+function Card({product} : CardProps) : JSX.Element {
+  const dispatch = useAppDispatch();
+
+  const {id, name, price, standart, isHit, isStock, inCart, img} = product;
+  const [countState, setCount] = useState(1);
   return (
     <div className="card">
-      <img src="images/shop-item.jpg" alt="Изображение товара" width={180} height={200}/>
+      <img src={img} alt="Изображение товара" width={180} height={200}/>
       <div className="text-content">
-        <span className="standart">ГОСТ 14911-82</span>
-        <h3>Опора тавровая хомутовая ТХ</h3>
+        <span className="standart">{standart}</span>
+        <h3>{name}</h3>
         <div className="add-to-cart">
-          <span className="price">849.9 руб.</span>
+          <span className="price">{price} руб.</span>
           <div className="adding-control">
-            <button className='plus'>+</button>
-            <span className='counter'>3</span>
-            <button className='minus'>-</button>
+            <button className='plus' onClick={() => {setCount(countState + 1)}}>+</button>
+            <span className='counter'>{countState}</span>
+            <button className='minus' onClick={() => {setCount(countState - 1 < 0 ? 0 : countState - 1)}}>-</button>
           </div>
         </div>
       </div>
       <div className="buttons">
-        <button className='add'>
-          <img src="images/icons/cart-btn.svg" alt="" width={15} height={13}/>
-          В корзину
-        </button>
+        {
+          inCart ? (
+            <button className='add added'
+              onClick={() => {
+                dispatch(Action.CART.ADD({id: generateId(), productId: id, count: countState}));
+              }}
+            >
+              <img src="images/icons/cart-btn.svg" alt="" width={15} height={13}/>
+              В корзине
+            </button>
+          ) : (
+            <button className='add'
+              onClick={() => {
+                dispatch(Action.CART.ADD({id: generateId(), productId: id, count: countState}));
+              }}
+            >
+              <img src="images/icons/cart-btn.svg" alt="" width={15} height={13}/>
+              В корзину
+            </button>
+          )
+        }
+        
         <button className='show-more'>Подробнее</button>
       </div>
       <div className="special">
-        <span className='hit'>Хит</span>
-        <span className='discount'>Скидка</span>
-        <span className='stock'>Акция</span>
+        {
+          isHit ? <span className='hit'>Хит</span> : <></>
+        }
+        {
+          isStock ? <span className='stock'>Акция</span> : <></>
+        }
       </div>
       <div className="favorite">
         <img src="images/icons/favorite-card.svg" alt="" width={12} height={12}/>

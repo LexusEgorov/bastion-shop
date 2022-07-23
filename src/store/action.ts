@@ -1,8 +1,8 @@
 import { createAction } from "@reduxjs/toolkit";
-import { ProductType } from "../types/types";
 
 const StandartActions = {
-  ADD: createAction<{id: number, name: string}>('standarts/add'),
+  ADD: createAction<{id: number, name: string, isActive: boolean}>('standarts/add'),
+  CHECK: createAction<{id: number}>('standarts/check'),
 };
 
 const TypeActions = {
@@ -15,18 +15,22 @@ const ProductActions = {
     name: string,
     typeId: number,
     price: number,
-    standartId: number 
+    standart: string,
+    img: string,
+    isHit: boolean,
+    isStock: boolean,
+    inCart: boolean,
   }>('products/add'),
 };
 
 const CartActions = {
   ADD: createAction<{
     id: number,
-    product: ProductType,
+    productId: number,
     count: number,
   }>('cart/add'),
   CHANGE: createAction<{id: number, count: number}>('cart/change'),
-  DELETE: createAction<{id: number}>('cart/delete'),
+  DELETE: createAction<{id: number, productId: number}>('cart/delete'),
   CLEAR: createAction('cart/clear'),
 };
 

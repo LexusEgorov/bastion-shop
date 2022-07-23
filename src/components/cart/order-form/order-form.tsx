@@ -1,6 +1,19 @@
+import { useAppSelector } from '../../../hooks/hooks';
 import './order-form.css'
 
 function OrderForm() : JSX.Element {
+  const products = useAppSelector((state) => state.products);
+  const cartProducts = useAppSelector((state) => state.cartProducts);
+
+  let totalPrice = 0;
+
+  for(const cartProduct of cartProducts){
+    const index = products.findIndex((product) => product.id === cartProduct.productId);
+    if(index !== -1){
+      totalPrice += cartProduct.count * products[index].price;
+    }  
+  }
+
   return (
     <div className="order-form">
       <div className='form-header'>
@@ -41,7 +54,7 @@ function OrderForm() : JSX.Element {
         <div className="form-footer">
           <div className="result-price">
             <span>Итого</span>
-            <span className='price'>8 499 руб.</span>
+            <span className='price'>{totalPrice} руб.</span>
           </div>
           <button className='sub' type='submit'>
             <img src="./images/icons/cart-form.svg" alt="" width={17} height={15}/>

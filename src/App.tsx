@@ -10,11 +10,6 @@ import TypeForm from './components/type-form/type-form';
 import { useAppDispatch } from './hooks/hooks';
 import { Action } from './store/action';
 
-const shopTypes = [
-  {id: 1, type: 'aaa'},
-  {id: 2, type: 'bbb'}
-];
-
 function App() {
   const dispatch = useAppDispatch();
   dispatch(Action.INIT());
@@ -26,7 +21,7 @@ function App() {
             <Route index element={<Main /> } />
             <Route path='/cart' element={<Cart />} />
             <Route path='/add-type' element={<TypeForm />} />
-            <Route path='/add-product' element={<ShopForm types={shopTypes}/>} />
+            <Route path='/add-product' element={<ShopForm />} />
           </Route>
           <Route path='*' element={<NotFound />}/>
         </Routes>
