@@ -4,7 +4,7 @@ import { Action } from "./action";
 const initialState = {
   types: [{
     id: -1,
-    type: '',
+    type: 'Выберите тип',
   }],
   standarts: [{
     id: -1,
@@ -35,11 +35,14 @@ const reducer = createReducer(initialState, (builder) => {
       state.standarts = [];
       state.cartProducts = [];
       state.products = [];
-      state.types = [];
     })
     .addCase(Action.TYPE.ADD, (state, action) => {
       const index = state.types.findIndex((type) => type.id === action.payload.id);
+      const {id, type} = action.payload;
       if(index === -1){
+        if(id === 0 || type === ''){
+          throw new Error('Не все поля формы заполнены');
+        }
         state.types.push(action.payload);
       } else{
         throw new Error('Тип с таким id уже существует');
@@ -57,7 +60,11 @@ const reducer = createReducer(initialState, (builder) => {
     })
     .addCase(Action.PRODUCT.ADD, (state, action) => {
       const index = state.products.findIndex((product) => product.id === action.payload.id);
+      const {id, name, typeId, standart, img} = action.payload;
       if(index === -1){
+        if(id === 0 || name === '' || typeId === -1 || standart === '' || img === ''){
+          throw new Error('Не все поля формы заполнены');
+        }
         state.products.push(action.payload);
       } else{
         throw new Error('Продукт с таким id уже существует');

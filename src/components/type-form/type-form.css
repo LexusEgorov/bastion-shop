@@ -49,4 +49,7 @@
   font-size: 15px;
   line-height: 18px;
   max-height: 50px;
+}
+.type-form .small-container form .disabled {
+  background-color: rgba(201, 62, 51, 0.7);
 }/*# sourceMappingURL=type-form.css.map */
