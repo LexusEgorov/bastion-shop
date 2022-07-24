@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/bastion-shop/' element={<Layout />}>
+          <Route path='/' element={<Layout />}>
             <Route index element={<Main /> } />
             <Route path='/cart' element={<Cart />} />
             <Route path='/add-type' element={<TypeForm />} />

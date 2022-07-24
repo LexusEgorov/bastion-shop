@@ -1,6 +1,6 @@
 {
   "name": "bastion",
-  "homepage": "http://lexusegorov.github.io/bastion-shop",
+  "homepage": "http://lexusegorov.github.io/bastion-shop/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
