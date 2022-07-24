@@ -46,7 +46,7 @@ function TypeForm() : JSX.Element {
               onClick={(evt) => {
                 evt.preventDefault();
                 try {
-                  dispatch(Action.TYPE.ADD({id: id, type: type}));
+                  dispatch(Action.TYPE.ADD({id: id, type: type, isActive: false}));
                   setId(1);
                   setType('');
                 } catch(err) {

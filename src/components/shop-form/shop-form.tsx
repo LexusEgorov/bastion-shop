@@ -12,7 +12,7 @@ const generateId = generator();
 function ShopForm() : JSX.Element {
   const dispatch = useAppDispatch();
 
-  const [stateId, setId] = useState(0);
+  const [stateId, setId] = useState(1);
   const [errorId, setIdError] = useState(false);
   const [stateName, setName] = useState('');
   const [errorName, setNameError] = useState(false);
@@ -32,7 +32,7 @@ function ShopForm() : JSX.Element {
           <h2>Добавление товара</h2>
         </div>
         <div className="small-container">
-          <form action="">
+          <form action="" id='form-add'>
             <label htmlFor="id">ID</label>
             {errorId ? <span className='input-error'>Id должен быть от 1 до 999999</span> : <></>}
             <input type="number" name="id" id="id" placeholder="Id" min={1} required
@@ -108,7 +108,7 @@ function ShopForm() : JSX.Element {
                     inCart: false,
                   }));
                   dispatch(Action.STANDART.ADD({
-                    id: generateId(),
+                    id: generateId() + Date.now(),
                     name: stateStandart,
                     isActive: false,
                   }));
@@ -118,6 +118,8 @@ function ShopForm() : JSX.Element {
                   setPrice(0);
                   setImg('');
                   setStandart('');
+                  const form : HTMLFormElement = document.querySelector('#form-add')!;
+                  form.reset();
                 } catch(err){
                   alert(err);
                 }

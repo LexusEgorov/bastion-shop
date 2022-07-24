@@ -4,4 +4,20 @@
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid #e6e6e6;
+}
+.type-filter .types-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.type-filter .types-list .type-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.type-filter .types-list .type-checkbox input {
+  margin-right: 10px;
+}
+.type-filter .types-list .type-checkbox label {
+  font-family: "Fira Sans";
 }/*# sourceMappingURL=type-filter.css.map */

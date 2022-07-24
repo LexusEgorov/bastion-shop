@@ -5,6 +5,7 @@ const initialState = {
   types: [{
     id: -1,
     type: 'Выберите тип',
+    isActive: false,
   }],
   standarts: [{
     id: -1,
@@ -48,6 +49,10 @@ const reducer = createReducer(initialState, (builder) => {
         throw new Error('Тип с таким id уже существует');
       }
     })
+    .addCase(Action.TYPE.CHECK, (state, action) => {
+      const index = state.types.findIndex((type) => type.id === action.payload.id);
+      state.types[index].isActive = !state.types[index].isActive;
+    })
     .addCase(Action.STANDART.ADD, (state, action) => {
       const index = state.standarts.findIndex((standart) => standart.id === action.payload.id);
       if(index === -1){
@@ -90,6 +95,7 @@ const reducer = createReducer(initialState, (builder) => {
       state.cartProducts = [...state.cartProducts.slice(0, cartIndex), ...state.cartProducts.slice(cartIndex + 1)];
     })
     .addCase(Action.CART.CLEAR, (state) => {
+      state.products.forEach((product) => product.inCart = false);
       state.cartProducts = [];
     });
 });

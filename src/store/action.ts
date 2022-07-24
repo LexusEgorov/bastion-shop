@@ -6,7 +6,8 @@ const StandartActions = {
 };
 
 const TypeActions = {
-  ADD: createAction<{id: number, type: string}>('typse/add'),
+  ADD: createAction<{id: number, type: string, isActive: boolean}>('types/add'),
+  CHECK: createAction<{id: number}>('types/check')
 }; 
 
 const ProductActions = {

@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import Categories from './categories/categories';
 import Filters from './filters/filters';
 import ShopList from './shop-list/shop-list';
 import './styles/main.css'
 
 function Main() : JSX.Element {
+  const [minPrice, setMin] = useState(0);
+  const [maxPrice, setMax] = useState(10000);
+  
   return (
     <>
       <div className="wide-container">
@@ -25,8 +29,8 @@ function Main() : JSX.Element {
         </div>
         <section className='main-section'>
           <Categories />
-          <Filters />
-          <ShopList />
+          <Filters minPrice={minPrice} maxPrice={maxPrice} setMin={setMin} setMax={setMax}/>
+          <ShopList minPrice={minPrice} maxPrice={maxPrice}/>
           <div className="main-footer">
             <div className="main-footer-header">
               <p>Опоры трубопроводов от Бастион Груп - производитель металлических изделий №1</p>
