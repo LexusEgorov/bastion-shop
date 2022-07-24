@@ -1,5 +1,6 @@
 {
   "name": "bastion",
+  "homepage": "http://lexusegorov.github.io/bastion-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
   "devDependencies": {
     "@reduxjs/toolkit": "1.8.3",
     "@types/react-redux": "7.1.24",
+    "gh-pages": "4.0.0",
     "nouislider-react": "3.4.1",
     "react-redux": "8.0.2",
     "react-router-dom": "^6.3.0",
