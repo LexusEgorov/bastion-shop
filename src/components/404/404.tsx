@@ -5,7 +5,7 @@ function NotFound(){
   return (
     <div className="not-found">
       <h2>Такой страницы нет :(</h2>
-      <Link to="/">На главную</Link>
+      <Link to="/bastion-shop/">На главную</Link>
     </div>
   );
 }

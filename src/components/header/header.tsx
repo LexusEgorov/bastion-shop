@@ -10,8 +10,8 @@ function Header() : JSX.Element {
       <div className="wide-container">
         <div className="upper-container">
           <nav className="main-nav">
-            <Link to='/add-type'>Типы продуктов</Link>
-            <Link to='/add-product'>Продукты</Link>
+            <Link to='/bastion-shop/add-type'>Типы продуктов</Link>
+            <Link to='/bastion-shop/add-product'>Продукты</Link>
             <a href="">Выгоды для вас</a>
             <a href="">Гарантии</a>
             <a href="">Контакты</a>
@@ -34,7 +34,7 @@ function Header() : JSX.Element {
       </div>
         <div className="middle-container">
           <div className="wide-container">
-            <Link to="/" className="logo">
+            <Link to="/bastion-shop/" className="logo">
               <img src="images/logo.svg" alt="Bastion Group" width="82" height="70"/>
               <h1>Производитель металлических изделий №1</h1>
             </Link>
@@ -51,7 +51,7 @@ function Header() : JSX.Element {
                 <img src="images/icons/favorite.svg" alt="" width="19" height="18"/>
                 Избранное
               </button>
-              <Link to='/cart' className="shopping-cart-btn btn">
+              <Link to='/bastion-shop/cart' className="shopping-cart-btn btn">
                 <div className="image">
                   <img src="images/icons/cart.svg" alt="" width="20" height="20"/>
                   <div className="count-info">
