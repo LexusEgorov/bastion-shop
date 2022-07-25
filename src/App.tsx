@@ -19,9 +19,9 @@ function App() {
         <Routes>
           <Route path='/bastion-shop/' element={<Layout />}>
             <Route index element={<Main /> } />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/add-type' element={<TypeForm />} />
-            <Route path='/add-product' element={<ShopForm />} />
+            <Route path='/bastion-shop/cart' element={<Cart />} />
+            <Route path='/bastion-shop/add-type' element={<TypeForm />} />
+            <Route path='/bastion-shop/add-product' element={<ShopForm />} />
           </Route>
           <Route path='*' element={<NotFound />}/>
         </Routes>
